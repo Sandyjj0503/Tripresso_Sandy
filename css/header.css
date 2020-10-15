@@ -1,0 +1,31 @@
+header{
+	display: block;	
+}
+.header-normal{
+	display: block;
+}
+.header-mobile{
+	display: none;
+}
+
+/*=============================================================== 平板版型區 ===============================================================*/
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+.header-normal{
+display: block;
+}
+.header-mobile{
+	display: none;
+}
+}
+
+/*=============================================================== Mobile版型區 ===============================================================*/
+
+@media screen and (max-width: 991px) {
+.header-normal{
+display: none;
+}
+.header-mobile{
+	display: block;
+}
+}

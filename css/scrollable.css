@@ -1,0 +1,223 @@
+﻿.scrollWrap, .scrollWrap > *{
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+body{
+	margin:0;
+	padding:0;
+}
+.scrollWrap{
+	width:960px;
+	margin:0 auto;
+	padding:10px 0 0 0px;
+}
+
+.scrollWrap img{
+	max-width:100%;
+	height: auto;
+	border:0;
+}
+.scrollOutbox{
+	position: relative;
+	max-width: 100%;
+	height:250px;
+	margin: 0 auto;
+	padding: 20px 0;
+	border-radius:5px;
+	overflow:hidden;
+	background-color:#f7f8fa;
+}
+.scrollable{
+	position: relative;
+	max-width: 960px;
+	margin:0 auto;
+	overflow: hidden;
+}
+.scrollInbox{
+	position: absolute;
+	width: 20000em;
+	top: 0;
+	left: 0;
+	margin: 0;/*test*/
+	padding:0;
+	list-style: none;
+	overflow: hidden;
+}
+.scrollInbox > li{
+	float: left;
+}
+.scrollInbox li a{
+	display: block;
+	width: 300px;
+	height: 225px;
+	margin:0 10px;
+	text-align: center;
+	text-decoration:none;
+	border:1px solid #dce0e8;
+	background: #fff;
+	overflow:hidden;
+}
+.scrollInbox li a p{
+	margin:0;
+	padding:5px;
+	font-size:18px;
+	line-height:24px;
+	color:#1976d2;
+}
+.scrollInbox li a:hover{
+	border:2px solid #90a2c5;
+}
+.scrollInbox li a:hover p{
+	text-decoration:none;
+	color:#e16d76 !important;
+}
+
+/*.scrollInbox li:nth-child(odd) a
+{
+	background: #ddd;
+}
+*/
+.scrollOutbox .scrollPrev, .scrollOutbox .scrollNext{
+	position: absolute;
+	width: 30px;
+	height:250px;
+	text-align:center;
+	background-color:#dfdfe0;
+	cursor: pointer;
+}
+.scrollOutbox .scrollPrev{
+	left: 0;
+	top: 0;
+	border-radius: 5px 0 0 5px;
+}
+.scrollOutbox .scrollNext{
+	right:0;
+	top: 0;
+	background-position: 30px 0;
+	border-radius:0 5px 5px 0;
+}
+.scrollOutbox .scrollPrev i, .scrollOutbox .scrollNext i{
+	font-size:24px;
+	line-height:250px;
+	color:#fff;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+.scrollWrap{
+	width:100%;
+	margin:0;
+	padding:30px 0 0 30px;
+}
+.scrollOutbox{
+	height:250px;
+	overflow:hidden;
+}
+.scrollInbox{
+	margin:0;
+}
+.scrollInbox li a{
+	display: block;
+	width: 296px;
+	height: 250px;
+	margin:0 5px;
+}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+.scrollWrap{
+	width:100%;
+	margin:0;
+	padding:30px 0 0;
+}
+.scrollOutbox{
+	height:200px;
+	overflow:hidden;
+}
+.scrollInbox{
+	margin:0;
+}
+.scrollInbox li a{
+	display: block;
+	width: 240px;
+	height: 180px;
+	margin:0 5px;
+}
+.scrollOutbox .scrollPrev, .scrollOutbox .scrollNext{
+	width: 30px;
+	height:200px;
+}
+.scrollOutbox .scrollPrev i, .scrollOutbox .scrollNext i{
+	line-height:200px;
+}
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+.scrollWrap{
+	width:100%;
+	margin:0;
+	padding:30px 12px 0;
+}
+.scrollOutbox{
+	height:170px;
+	margin:0 auto;
+	padding:15px 0;
+	overflow:hidden;
+}
+.scrollInbox{
+	margin-left:20px;
+}
+.scrollInbox li a{
+	display: block;
+	width: 200px;
+	height: 150px;
+	margin:0 2px;
+}
+.scrollInbox li a p{
+	padding:1px 0;
+	font-size:16px;
+	line-height:22px;
+}
+.scrollOutbox .scrollPrev, .scrollOutbox .scrollNext{
+	width: 30px;
+	height:170px;
+}
+.scrollOutbox .scrollPrev i, .scrollOutbox .scrollNext i{
+	line-height:170px;
+}
+}
+
+@media screen and (max-width: 499px){
+.scrollWrap{
+	width:100%;
+	margin:0;
+	padding:30px 12px 0;
+}
+.scrollOutbox{
+	height:190px;
+	margin:0 auto;
+	padding:15px 0;
+	overflow:hidden;
+}
+.scrollInbox{
+	margin-left:60px;
+}
+.scrollInbox li a{
+	display: block;
+	width: 230px;
+	height: 173px;
+	margin:0 2px;
+}
+.scrollInbox li a p{
+	padding:1px 0;
+	font-size:16px;
+	line-height:22px;
+}
+.scrollOutbox .scrollPrev, .scrollOutbox .scrollNext{
+	width: 30px;
+	height:190px;
+}
+.scrollOutbox .scrollPrev i, .scrollOutbox .scrollNext i{
+	line-height:190px;
+}
+}

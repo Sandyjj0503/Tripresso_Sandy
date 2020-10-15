@@ -1,0 +1,246 @@
+@charset "utf-8";
+/*---job table start---*/
+
+/*---job table end---*/
+
+/* 更多職缺表格 */
+.rwd-table1 {
+  background: #ededed;
+  color: #000;
+  overflow: hidden;
+  margin: 50px auto;
+  width: 100%;
+  table-layout: fixed;
+}
+.rwd-table1 thead tr{
+	background: #025eae;
+	color:#fff;
+	font-weight: bold;
+}
+.rwd-table1 thead tr th, .rwd-table1 tbody tr td{
+	padding: 1em .5em;
+}
+.rwd-table1 tr {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.rwd-table1 tbody tr:nth-child(even){
+	background-color:#CFCFCF;
+}
+.rwd-table1 thead tr th:nth-child(1), .rwd-table1 tbody tr td:nth-child(1){	
+	width: 4em;
+	text-align: center;
+}
+.rwd-table1 thead tr th:nth-child(2){
+	text-align: left;
+}
+.rwd-table1 thead tr th:nth-child(3){
+	text-align: left;
+}
+.rwd-table1 thead tr th:nth-child(4){
+	width: 8em;
+	text-align: left;
+}
+.rwd-table1 thead tr th:nth-child(5), .rwd-table1 tbody tr td:nth-child(5){
+	width: 6em;
+	text-align: center;
+}
+@media (max-width: 767px) {
+	.rwd-table1 thead tr th, .rwd-table1 tbody tr td:first-child {
+		display: none;
+	}
+	.rwd-table1 tbody tr td:nth-child(5){
+		width: 100%;
+		text-align: left;
+	}
+	.rwd-table1 tbody tr td{
+		display: block;
+		width: 100%;
+		text-align: left;
+	}
+	.ellipsis{
+		color:#025eae;
+		font-size:18px; 
+		font-weight: bolder;
+	}
+	.rwd-table1 tbody tr td{
+		padding: .5em;
+	}
+	.rwd-table1 tbody tr td:before {
+		padding: 0em 1.5em;
+		content: attr(data-th) ": ";
+		color:#025eae;
+		font-weight: bold;
+		width: 5em;
+	}
+	.rwd-table1 tbody tr td:nth-child(2):before {
+		content: none;
+		padding: 0 0.5em;
+	}
+	.rwd-table1 tbody tr td:nth-child(2) {
+		padding-top: 1em;
+	}
+	.rwd-table1 tbody tr td:nth-last-child(1){
+		padding-bottom: 1em;
+	}
+}
+
+
+/*@media (min-width: 767px) {
+	.rwd-table1 td:before {
+		display: none;
+	}
+}*/
+
+/*
+@media (min-width: 767px) {
+
+  .rwd-table1 th, .rwd-table1 td {
+    display: table-cell;
+    padding: .25em .5em;
+  }
+  .rwd-table1 th:first-child, .rwd-table1 td:first-child {
+    padding-left: 0;	
+	border:1 solid #FFFFFF;
+  }
+  .rwd-table1 th:last-child, .rwd-table1 td:last-child {
+    padding-right: 0;
+  }
+}
+*/
+
+/*@media (max-width: 767px){
+	.rwd-table1 {
+		margin: 20px 0;
+		width: 100%;
+	}
+	.rwd-table1 tr td:first-child{
+		display: none;
+	}
+}*/
+/*
+.rwd-table1 tr td a{
+	color: #000;
+}
+.rwd-table1 tr td a[href^="http"] {
+  color: #025eae;
+}
+.rwd-table1 tr td a[href^="http"]:hover{
+	color: #337ab7;
+}
+.rwd-table1 tr td p{
+	
+	text-align:left;
+}
+.rwd-table1 tr th{
+	text-align: left;
+}
+.rwd-table1 tr td{
+  border-color: #fff;
+  word-wrap: break-word;
+
+}
+.rwd-table1 tr th:nth-child(1){
+	width:4.5em;
+	text-align:center;
+	
+}
+.rwd-table1 tr th:nth-child(2){
+	text-align: left;
+	
+}
+.rwd-table1 tr th:nth-child(3){
+    text-align: left;
+}
+.rwd-table1 tr th:nth-child(4){
+    text-align: left;
+    width:8.5em;
+}
+.rwd-table1 tr th:nth-child(5){
+	width:6.5em;
+	text-align:center;
+}
+
+.rwd-table1.f  tr th:nth-child(1){
+	width:5%;
+}
+.rwd-table1.f tr th:nth-child(2){
+	width:25%;
+	text-align: left;
+}
+.rwd-table1.f  tr th:nth-child(3){
+	width:5%;
+}
+.rwd-table1.f tr th:nth-child(4){
+	width:25%;
+	text-align: left;
+}
+*/
+/*@media (max-width: 767px){
+	.rwd-table1 tr td:nth-child(5){
+		text-align: left;
+	}
+.rwd-table1 tr td:nth-child(4){
+		text-align: left;
+	}
+.rwd-table1 tr td:nth-child(3){
+		text-align: center;
+	}
+.rwd-table1 tr td:nth-child(2){
+		text-align: left;
+	}
+.rwd-table1 th, .rwd-table1 td {
+  margin: .5em 1em;
+}
+.rwd-table1 tr td{
+  border-color: #fff;
+  word-wrap: break-word;
+  text-align:center;
+} 
+.rwd-table1 tr td:nth-child(1) p{
+	width:auto;
+	font-size:18px;
+	color:#025eae;
+	font-weight:600;
+	text-align:left;
+}
+
+  .rwd-table1 tr {
+  border-top: none;
+  border-bottom:none;
+}
+.rwd-table1 td:first-child{
+	padding:.7em;
+	margin:0;
+	}
+.rwd-table1 td:nth-child(3){
+	padding:.7em;
+	margin:0;
+	}
+}
+*/
+/*
+@media (min-width: 767px) {
+  .rwd-table1 th, .rwd-table1 td {
+    padding: 1em !important;
+  }
+}
+.rwd-table1 th, .rwd-table1 td:before {
+  color: #fff;
+  background: #025eae;
+}
+@media (max-width: 767px){
+	.rwd-table1 th, .rwd-table1 td:before {
+	  color: #025eae;
+	  background: none;
+	  width: 70px;
+	}
+}
+*/
+/* 更多職缺表格結束 */
+
+.ellipsis {
+overflow:hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}

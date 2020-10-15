@@ -1,0 +1,47 @@
+﻿@charset "utf-8";
+
+.corp-info .jobInfo {
+    padding-bottom:0;
+}
+
+.corp-info .jobList{
+    justify-content: left;
+}
+
+.corp-info .recmdJobBox{
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-top: 1px solid #ced0d9;
+    border-left: 1px solid #ced0d9;
+    border-right: 1px solid #ced0d9;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+	-webkit-box-shadow: 2px 4px 2px rgba(0,0,0,.2); 
+	-moz-box-shadow: 2px 4px 2px rgba(0,0,0,.2); 
+	box-shadow: 2px 4px 2px rgba(0,0,0,.2); 
+}
+.corp-info .recmdJobBox:hover{
+    background-color: #fffef5;
+}
+
+.corp-info .buttonApply{
+    cursor:pointer;
+    width: 94%;
+    height: 42px;
+    margin: 10px 3% 20px;
+	text-align:center;
+	text-decoration:none;
+	font-size:20px;
+	line-height:40px;
+	color:#fff;
+	border-radius:16px;
+    background-image: linear-gradient(to top, #e5505f 0%, #ff8c90 100%);
+	-webkit-box-shadow: 1px 2px 1px rgba(0,0,0,.2); 
+	-moz-box-shadow: 1px 2px 1px rgba(0,0,0,.2); 
+	box-shadow: 1px 2px 1px rgba(0,0,0,.2); 
+}
+.corp-info .buttonApply:hover{
+	text-decoration:none;
+    background-image: linear-gradient(to top, #e65100 0%, #ff9800 100%);
+}

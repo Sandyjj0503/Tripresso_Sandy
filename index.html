@@ -1,0 +1,378 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Tripresso</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Tripresso" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/layout.css" />
+    <script src="js/jquery.min.js"></script>
+    <style>
+        article {
+            width: 100%;
+            margin-top: 0;
+            padding: 50px 0;
+            background-color: #f2fffc;
+        }
+        .corpAllList li:nth-child(even) {
+            background-color: #fff;
+        }
+
+        .banner {
+            max-width: 100%;
+            height: 260px;
+            margin-bottom: 20px;
+            background-image: url(https://img.onl/UjA4as);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .sortBox {
+            background: #fff;
+            min-height: 55px;
+            margin: 15px 0;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            flex-direction: row;
+            color: #616161;
+        }
+
+        .sortByTitle {
+            padding: 0 15px;
+            flex: none;
+            width: 70px;
+            text-align: center;
+            font-weight: 700;
+            line-height: 55px;
+            border-right: 1px #eee solid;
+        }
+
+        .changeTags {
+            width: 100%;
+            display: flex;
+        }
+
+        .changeTags li {
+            cursor: pointer;
+            flex: 1;
+            text-align: center;
+            transition: all 0.5s ease;
+            text-decoration: none;
+        }
+
+        .changeTags li:hover {
+            background: #f5f5f5;
+        }
+        #mainNav li span {
+            width: 150px;
+        }
+        .corpInfoBox a {
+            color: #333;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* tag */
+        .preFlag {
+            margin: 10px 15px 15px 0;
+            font-size: 0;
+        }
+
+        .preFlag .tag {
+            display: inline-block;
+            margin: 3px;
+            border-radius: 15px;
+            font-size: 12px;
+            padding: 0 7px;
+            color: #03a9f4;
+            background: #fff;
+            border: 1px #03a9f4 solid;
+            cursor: default;
+            line-height: 1.5;
+        }
+
+        /* date */
+        .dateFavoriteBox {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            border-top: 1px #eee solid;
+        }
+        .dateFavoriteBox .dateBox {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
+            padding: 5px 0 5px 5px;
+            position: relative;
+        }
+        .dateFavoriteBox .dateBox .dateList {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: row;
+            white-space: nowrap;
+        }
+        .dateFavoriteBox .dateBox .flagGroupStatus a {
+            font-size: 13px;
+            font-weight: 700;
+            position: relative;
+        }
+        .dateFavoriteBox .dateBox .flagGroupStatus .toolTipBox {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            margin-right: 15px;
+            color: #03a9f4;
+        }
+        .dateFavoriteBox .dateBox .dateList .flagGroupStatus[rel='selled'] .toolTipTextBox {
+            width: 60px;
+            font-size: 12px;
+            background-color: inherit;
+            border: 1px #03a9f4 solid;
+            color: #03a9f4;
+            padding: 4px 0;
+        }
+        .dateFavoriteBox .dateBox .dateMore {
+            font-size: 12px;
+            margin-left: 10px;
+            cursor: pointer;
+            color: #03a9f4;
+        }
+        .discountInfo {
+            flex: none;
+            width: 190px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 20px 5px 0;
+        }
+        .dayPriceBox {
+            text-align: right;
+        }
+        .dayPriceBox .dayPrice {
+            font-size: 14px;
+            color: #333;
+        }
+        .dayPriceBox .dayPrice span {
+            color: #ff9800;
+            font-size: 23px;
+            font-weight: 700;
+        }
+
+        /* btn */
+        .DevButton {
+            border-radius: 4px;
+            color: #666;
+            padding: 5px;
+            display: inline-block;
+            border: 1px solid #242f68;
+            font-size: 20px;
+        }
+
+        .DevButton.blue {
+            background: #005e92;
+            border: 1px solid #005e92;
+        }
+
+        .DevButton a {
+            padding: 8px 28px;
+        }
+
+        .DevButton a:link,
+        .DevButton a:visited {
+            color: #2a367a;
+            font-weight: 200;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="mainContent" id="main">
+        <section>
+            <div class="banner"></div>
+            <div class="sortBox">
+                <span class="sortByTitle">排序</span>
+                <ul class="changeTags" id="mainNav">
+                    <li>
+                        <span>
+                           <a href="#!">精選評分</a>
+                           <i class="fa fa-caret-down" aria-hidden="true"></i>
+                           <ul class="navDrop">
+                              <li><a class="rating" href="javascript:void(0)">評分：低至高</a></li>
+                              <li><a class="rating" href="javascript:void(0)">評分：高至低</a></li>
+                           </ul>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                           <a href="#!">價格</a>
+                           <i class="fa fa-caret-down" aria-hidden="true"></i>
+                           <ul class="navDrop">
+                              <li><a class="price_asc" href="javascript:void(0)">價格：低至高</a></li>
+                              <li><a class="price_desc" href="javascript:void(0)">價格：高至低</a></li>
+                           </ul>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                           <a href="#!">天數</a>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                           <a href="#!">出發日期</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div id="search-hint" class="fmColW100 fmText03 fz20 fGray01 textC">
+                <span class="marL10 fIndigo01">台灣旅遊 {{totalRecord}} 個行程，平均團費 4,493 元</span>
+            </div> -->
+            <div class="blank20"></div>
+            <ul id="corp-list" class="dataList">
+                <li class="flexBox03 itemColumn02" v-for="item in dataList">
+                    <a :href="item.tour_detail_url" class="corpInfoLogo">
+                        <div class="bgCorpInfoLogo" :style="{backgroundImage: 'url(' + item.image_url + ')' }">
+                        </div>
+                    </a>
+                    <div class="corpInfoBox">
+                        <div class="fmColW100 fmText02 flexBox01 itemColumn02">
+                            <div class="marR15 fGray02">
+                                {{item.agency}}
+                            </div>
+                            <div class="marR15 fGray02" style="color: #ffc800;">
+                                <!-- <ul class="preFlag">
+                                    <li v-for="(ratings, index) in item.rating" v-if="index == item.rating "><i class="fa fa-star" aria-hidden="true"></i></li>
+                                </ul> -->
+                                <i class="fa fa-star" aria-hidden="true"></i>{{item.rating}}
+                            </div>
+                        </div>
+
+                        <div class="fmColW100 fmText02 fz24 fBlue01 marB10">
+                            <a :href="item.tour_detail_url">{{item.title}}</a>
+                        </div>
+
+                        <div>
+                            <ul class="preFlag">
+                                <li class="tag tripressoTag" v-for="(tag, index) in item.tags">{{tag}}</li>
+                            </ul>
+                        </div>
+                        <div class="dateFavoriteBox">
+                            <div class="dateBox">
+                                <div class="dateList">
+                                    <div rel="selled" class="flagGroupStatus isShow">
+                                        <a itemprop="url" href="#" target="_blank" class="clickTrack" >
+                                            <div class="toolTipBox" v-for="(groupInfo, index) in item.group" v-if="index < 4 ">
+                                                {{ groupInfo.date }}
+                                                <div class="toolTipTextBox">
+                                                    可售{{ groupInfo.quantity }}位
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dateMore">
+                                    <div class="choiceDate">更多日期</div>
+                                </div>
+                            </div> <a href="#" target="_blank" class="discountInfo clickTrack">
+                                <div class="disscountBox">
+                                    <div class="dayPriceBox">
+                                        <div class="dayPrice"><span>{{item.tour_days}}</span>天
+                                            <span>{{item.min_price}}</span>元起
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="blank10"></div>
+                    </div>
+                </li>
+            </ul>
+
+
+            <div id="loadingIMG" style="display:none;"><i class="fa fa-spinner fa-pulse"></i>資料載入中，請稍等...</div>
+            <div id="page-btn">
+                <!------------   頁次列   -------------->
+            </div>
+
+        </section>
+    </article>
+
+    <!------- 回頂端按鈕設定 ------->
+    <div class="goTop"><a><img src="img/topBtn.png" alt="GO TOP"></a></div>
+    <!------- 回頂端按鈕設定 End ------->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script type="text/javascript" src="./js/xsMenu.js"></script>
+    <script type="text/javascript" src="./js/float-top.js"></script>
+    <script src="js/page.js"></script>
+    <script>
+        const vm = new Vue({
+            el: "#main",
+            data: {
+                totalRecord: "100",
+                totalPage: "10",
+                dataList: [],
+            },
+            created: function () {
+                this.getList();
+            },
+            methods: {
+                getList: function () {
+                    var vm = this;
+                    var page = vm.getSearchParams("page") != undefined ? vm.getSearchParams("page") : "1";
+                    if (!$.isNumeric(page)) { page = "1"; }
+                    // //組合param
+                    var searchParam = "";
+ 
+                    var url = "https://cors-anywhere.herokuapp.com/https://interview.tripresso.com/tour/search?row_per_page=10&page="+ page + searchParam;
+                    $.ajax({
+                        url: url,
+                        type: "GET",
+                        headers: {
+                            Accept: "application/json; charset=utf-8"
+                        },          
+                        dataType: "json",
+                        success: function (result) {
+                            var pageBtnHtml = getPageBtnHtml(vm.totalRecord, vm.totalPage, page, searchParam);
+                            vm.dataList = result.data.tour_list;
+                            $("#page-btn").html(pageBtnHtml);
+                        }, beforeSend: function () {
+                            $('#loadingIMG').show();
+                        }, complete: function () {
+                            $('#loadingIMG').hide();
+                        }, error: function (err) {
+                            console.log(err)
+                        }
+                    });    
+                },
+                getSearchParams: function () {
+                    var key = false, res = {}, itm = null;
+                    var qs = location.search.substring(1);
+                    if (arguments.length > 0 && arguments[0].length > 1)
+                        key = arguments[0];
+                    var pattern = /([^&=]+)=([^&]*)/g;
+                    while (itm = pattern.exec(qs)) {
+                        if (key !== false && decodeURIComponent(itm[1]) === key)
+                            return decodeURIComponent(itm[2]);
+                        else if (key === false)
+                            res[decodeURIComponent(itm[1])] = decodeURIComponent(itm[2]);
+                    }
+                    return key === false ? res : null;
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
