@@ -1,8 +1,8 @@
 var vm = new Vue({
     el: "#main",
     data: {
-        totalRecord: "30",
-        totalPage: "3",
+        totalRecord: "50",
+        totalPage: "5",
         dataList: [],
     },
     created: function () {
@@ -125,6 +125,7 @@ var vm = new Vue({
                     Accept: "application/json; charset=utf-8"
                 },          
                 dataType: "json",
+                async: true,
                 success: function (result) {
                     var pageBtnHtml = getPageBtnHtml(vm.totalRecord, vm.totalPage, page, searchParam);
                     vm.dataList = result.data.tour_list;
