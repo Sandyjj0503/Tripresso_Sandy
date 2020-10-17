@@ -19,14 +19,15 @@
             <div class="banner"></div>
             <div class="sortBox">
                 <span class="sortByTitle">排序</span>
+                <input type="hidden" class="searchParams" value="">
                 <ul class="changeTags" id="mainNav">
                     <li>
                         <span>
                            <a href="#!">精選評分</a>
                            <i class="fa fa-caret-down" aria-hidden="true"></i>
                            <ul class="navDrop">
-                              <li><a class="rating" href="javascript:void(0)">評分：低至高</a></li>
-                              <li><a class="rating" href="javascript:void(0)">評分：高至低</a></li>
+                              <li><a href="javascript:void(0)" @click="rating_asc">評分：低至高</a></li>
+                              <li><a href="javascript:void(0)" @click="rating_desc">評分：高至低</a></li>
                            </ul>
                         </span>
                     </li>
@@ -35,8 +36,8 @@
                            <a href="#!">價格</a>
                            <i class="fa fa-caret-down" aria-hidden="true"></i>
                            <ul class="navDrop">
-                              <li><a class="price_asc" href="javascript:void(0)">價格：低至高</a></li>
-                              <li><a class="price_desc" href="javascript:void(0)">價格：高至低</a></li>
+                              <li><a href="javascript:void(0)" @click="price_asc">價格：低至高</a></li>
+                              <li><a href="javascript:void(0)" @click="price_desc">價格：高至低</a></li>
                            </ul>
                         </span>
                     </li>
