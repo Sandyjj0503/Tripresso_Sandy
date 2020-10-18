@@ -1,4 +1,8 @@
 /* for index */
+[v-cloak] {
+    display: none;
+}
+
 article {
     width: 100%;
     margin-top: 0;

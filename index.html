@@ -65,24 +65,24 @@
                     </a>
                     <div class="corpInfoBox">
                         <div class="fmColW100 fmText02 flexBox01 itemColumn02">
-                            <div class="marR15 fGray02">
+                            <div class="marR15 fGray02" v-cloak>
                                 {{item.agency}}
                             </div>
                             <div class="marR15 fGray02" style="color: #ffc800;">
                                 <!-- <ul class="preFlag">
                                     <li v-for="(ratings, index) in item.rating" v-if="index == item.rating "><i class="fa fa-star" aria-hidden="true"></i></li>
                                 </ul> -->
-                                <i class="fa fa-star" aria-hidden="true"></i>{{item.rating}}
+                                <i class="fa fa-star" aria-hidden="true" v-cloak></i>{{item.rating}}
                             </div>
                         </div>
 
                         <div class="fmColW100 fmText02 fz24 fBlue01 marB10">
-                            <a :href="item.tour_detail_url">{{item.title}}</a>
+                            <a :href="item.tour_detail_url" v-cloak>{{item.title}}</a>
                         </div>
 
                         <div>
                             <ul class="preFlag">
-                                <li class="tag tripressoTag" v-for="(tag, index) in item.tags">{{tag}}</li>
+                                <li class="tag tripressoTag" v-for="(tag, index) in item.tags" v-cloak>{{tag}}</li>
                             </ul>
                         </div>
                         <div class="dateFavoriteBox">
@@ -90,9 +90,9 @@
                                 <div class="dateList">
                                     <div rel="selled" class="flagGroupStatus isShow">
                                         <a itemprop="url" href="#" target="_blank" class="clickTrack" >
-                                            <div class="toolTipBox" v-for="(groupInfo, index) in item.group" v-if="index < 4 ">
+                                            <div v-cloak class="toolTipBox" v-for="(groupInfo, index) in item.group" v-if="index < 4 ">
                                                 {{ groupInfo.date }}
-                                                <div class="toolTipTextBox">
+                                                <div v-cloak class="toolTipTextBox">
                                                     可售{{ groupInfo.quantity }}位
                                                 </div>
                                             </div>
@@ -105,8 +105,8 @@
                             </div> <a href="#" target="_blank" class="discountInfo clickTrack">
                                 <div class="disscountBox">
                                     <div class="dayPriceBox">
-                                        <div class="dayPrice"><span>{{item.tour_days}}</span>天
-                                            <span>{{item.min_price}}</span>元起
+                                        <div v-cloak class="dayPrice"><span>{{item.tour_days}}</span>天
+                                            <span v-cloak>{{item.min_price}}</span>元起
                                         </div>
                                     </div>
                                 </div>
